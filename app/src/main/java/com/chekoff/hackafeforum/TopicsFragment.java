@@ -44,20 +44,15 @@ public class TopicsFragment extends Fragment {
     LayoutInflater mInflater;
     ListView listViewCollection;
     TopicsAdapter adapter;
-
     String urlDomain = "http://frm.hackafe.org";
     String urlFetchCategory = "/latest.json/";
     String urlMoreTopicURL = urlDomain + urlFetchCategory + "?page=0";
     List<Topics> topicsList = new LinkedList<>();
     List<Categories> categoriesList = new LinkedList<>();
     String LOG = "Hackafe Forum";
-
-
     MSG msg = new MSG();
-
     boolean isDataLoading;
     public static boolean isSettingsChanged = false;
-
 
     public TopicsFragment() {
         // Required empty public constructor
@@ -78,9 +73,6 @@ public class TopicsFragment extends Fragment {
         listViewCollection = (ListView) rootView.findViewById(R.id.list_main);
         adapter = new TopicsAdapter(mInflater, topicsList, getActivity());
         listViewCollection.setAdapter(adapter);
-
-        /*adapter.rowCount = topicsList.size();
-        adapter.notifyDataSetChanged();*/
 
         listViewCollection.setOnScrollListener(new AbsListView.OnScrollListener() {
 

@@ -1,0 +1,32 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/loading_images">
+
+        <CheckBoxPreference
+            android:key="load_posts_images"
+            android:title="@string/load_posts_images"
+            android:defaultValue="false" />
+        <CheckBoxPreference
+            android:key="load_posts_images_only_cached"
+            android:title="@string/load_posts_images_only_cached"
+            android:dependency="load_posts_images"
+            android:disableDependentsState="true"
+            android:defaultValue="true" />
+        <CheckBoxPreference
+            android:key="load_posts_images_only_wifi"
+            android:title="@string/load_posts_images_only_wifi"
+            android:dependency="load_posts_images_only_cached"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/system">
+
+        <Preference
+            android:title="@string/clear_cache"
+            android:key="clear_cache"
+            android:summary="This will act like a button" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

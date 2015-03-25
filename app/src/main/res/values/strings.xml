@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Hackafe Forum</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="title_activity_post">Post</string>
+
+    <string name="title_activity_settings">Settings</string>
+
+    <string name="loading_images">Loading images</string>
+    <string name="load_posts_images">Load posts images</string>
+    <string name="load_posts_images_only_cached">Only cached</string>
+    <string name="load_posts_images_only_wifi">No cached over WiFi only</string>
+
+    <string name="system">System</string>
+    <string name="clear_cache">Clear cached images</string>
+
+    <string name="dlg_yes">YES</string>
+    <string name="dlg_no">CANCEL</string>
+    <string name="dlg_cache_title">Delete image cache</string>
+    <string name="dlg_cache_message">After clearing the image cache, the cache includes the user avatars too, all images will be downloaded again.</string>
+</resources>

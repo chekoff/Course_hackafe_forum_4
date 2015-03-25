@@ -58,27 +58,18 @@ public class TopicsAdapter extends BaseAdapter {
         if (convertView == null) {
 
             convertView = inflater.inflate(R.layout.topics_item, parent, false);
-
-
-            //convertView.setTag(viewHolder);
-
-        } /*else {
-            viewHolder = (ViewHolder) convertView.getTag();
-
-        }*/
+        }
 
         /*if ( position % 2 == 0)
             listView.setBackgroundResource(R.drawable.listview_selector_even);
         else
             listView.setBackgroundResource(R.drawable.listview_selector_odd);*/
 
-
         TextView txtPostTitle = (TextView) convertView.findViewById(R.id.txtPostTitle);
         TextView txtViewsCount = (TextView) convertView.findViewById(R.id.txtViewsCount);
         TextView txtRepliesCount = (TextView) convertView.findViewById(R.id.txtRepliesCount);
         TextView txtLastPostedAt = (TextView) convertView.findViewById(R.id.txtLastPostedAt);
         LinearLayout categoryColor = (LinearLayout) convertView.findViewById(R.id.category_color);
-
 
         txtPostTitle.setText(topicsList.get(position).getTopicTitle());
 
@@ -87,7 +78,6 @@ public class TopicsAdapter extends BaseAdapter {
         } catch (Throwable t) {
             Log.e(LOG, "Invalid color:" + topicsList.get(position).getCategory().getText_color());
         }
-
 
         txtViewsCount.setText(String.format("View: %s", topicsList.get(position).getViewsCount()));
         txtRepliesCount.setText(String.format("Replies: %s", topicsList.get(position).getRepliesCount()));
@@ -105,13 +95,11 @@ public class TopicsAdapter extends BaseAdapter {
 
         viewHolder = new ViewHolder();
 
-
         viewHolder.imgButtUserOrigin = (ImageButton) convertView.findViewById(R.id.imgButtUserOrigin);
         viewHolder.imgButtUserLatest = (ImageButton) convertView.findViewById(R.id.imgButtUserLatest);
 
         viewHolder.imgButtUserOrigin.setImageBitmap(topicsList.get(position).getUserAvatar());
         viewHolder.imgButtUserLatest.setImageBitmap(topicsList.get(position).getUserLastPosterAvatar());
-
 
         //set OnClickListeners
         viewHolder.imgButtUserOrigin.setOnClickListener(new View.OnClickListener() {
